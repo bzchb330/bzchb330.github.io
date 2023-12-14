@@ -1,1 +1,1 @@
-this folder contains the code for MFA_3DPL projects
+This folder contains the example code for MFA_3DPL projects. To replicate this, start by utilizing FDM 3D printing Slicer to generate G-code files for both the shell and core models. Afterward, import these files into MATLAB as string arrays. Then modify the laser focal length value, offset coefficients between laser and FDM nozzle and also change the laser processing layer parameters.
