@@ -1,1 +1,1 @@
-
+This code is used together with a simple sensor, such as a LDR or thermister, to generator sine wave through PWM. The sine wave frequency will be a constant while running. And the amplitude will be propotional to the sensor reading.
