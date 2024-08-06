@@ -166,3 +166,28 @@ span.highlight {
     }
     
 }
+
+/* Add this to your CSS file */
+
+@media only screen and (max-width: 600px) {
+  /* Styles for screens smaller than 600px wide */
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .header, .content, .footer {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
