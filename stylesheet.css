@@ -1,4 +1,4 @@
-/* latin-ext */
+/* /* latin-ext */
 @font-face {
   font-family: 'Lato';
   font-style: italic;
@@ -190,4 +190,50 @@ span.highlight {
     width: 100%;
     height: auto;
   }
+}
+ */
+
+/* Base styles for larger screens */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header, .content, .footer {
+    margin: 20px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styles for screens smaller than 600px */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .header, .content, .footer {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+    }
+
+    img {
+        width: 100%;
+    }
 }
