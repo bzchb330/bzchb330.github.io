@@ -63,7 +63,7 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-
+/* /* new one */
 a {
   color: #1772d0;
   text-decoration: none;
@@ -272,5 +272,44 @@ table {
     }
     .highlight {
         font-size: 30px;
+    }
+}
+ */
+
+/* General reset and styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container .description {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .container img {
+        order: 1; /* Ensures the image stays first */
+    }
+    .container .description {
+        order: 2; /* Ensures the description stays second */
     }
 }
