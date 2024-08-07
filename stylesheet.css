@@ -237,3 +237,40 @@ img {
         width: 100%;
     }
 }
+/* General reset and styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 100%;
+    max-width: 1100px;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: separate;
+    margin: 0 auto;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+    td {
+        display: block;
+        width: 100%;
+        padding: 5%;
+    }
+    td img {
+        width: 100%;
+        height: auto;
+    }
+    td p {
+        text-align: center;
+    }
+    .highlight {
+        font-size: 30px;
+    }
+}
