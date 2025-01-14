@@ -21,8 +21,7 @@
     <script>
         let musicStarted = false; // Ensure music plays only once
 
-        // Unified scroll handler
-        const startMusicOnScroll = () => {
+        const startMusic = () => {
             if (!musicStarted) {
                 const audio = document.getElementById('backgroundMusic');
                 audio.play()
@@ -36,10 +35,10 @@
             }
         };
 
-        // Listen to multiple scroll-related events
-        window.addEventListener('scroll', startMusicOnScroll); // Normal scrolling
-        window.addEventListener('wheel', startMusicOnScroll); // Mouse wheel scrolling
-        window.addEventListener('touchmove', startMusicOnScroll); // Touch screen scrolling
+        // Listen to pointerdown (clicks, touch) and scrolling actions
+        window.addEventListener('pointerdown', startMusic); // Detect any pointer interaction
+        window.addEventListener('wheel', startMusic); // Detect scroll wheel usage
+        window.addEventListener('scroll', startMusic); // Detect normal scrolling
     </script>
 </body>
 </html>
