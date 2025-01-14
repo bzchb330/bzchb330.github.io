@@ -2,17 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Force Autoplay</title>
+    <title>Background Music</title>
 </head>
 <body>
-    <audio id="backgroundMusic" src="https://bzchb330.github.io/music/insomia.mp3" loop muted></audio>
+    <h1>Welcome to My Website</h1>
+    <button id="playButton">Play Background Music</button>
+    <audio id="backgroundMusic" src="https://bzchb330.github.io/music/insomia.mp3" loop></audio>
 
     <script>
-        window.onload = function() {
-            const audio = document.getElementById('backgroundMusic');
-            audio.muted = true; // Ensure it's muted for autoplay
-            audio.play().catch(error => console.log("Autoplay blocked:", error));
-        };
+        const playButton = document.getElementById('playButton');
+        const audio = document.getElementById('backgroundMusic');
+
+        playButton.addEventListener('click', function() {
+            audio.play();
+            playButton.style.display = 'none'; // Hide the button after starting playback
+        });
     </script>
 </body>
 </html>
