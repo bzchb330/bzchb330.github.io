@@ -2,20 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Background Music</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll-Triggered Music</title>
+    <style>
+        body {
+            height: 2000px; /* To create scrollable content */
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <button id="playButton">Play Background Music</button>
+    <h1>Scroll Down to Play Music</h1>
     <audio id="backgroundMusic" src="https://bzchb330.github.io/music/insomia.mp3" loop></audio>
 
     <script>
-        const playButton = document.getElementById('playButton');
-        const audio = document.getElementById('backgroundMusic');
+        let musicStarted = false; // To ensure the audio starts only once
 
-        playButton.addEventListener('click', function() {
-            audio.play();
-            playButton.style.display = 'none'; // Hide the button after starting playback
+        window.addEventListener('scroll', function() {
+            if (!musicStarted) {
+                const audio = document.getElementById('backgroundMusic');
+                audio.play()
+                    .then(() => {
+                        musicStarted = true; // Prevent further attempts to play
+                        console.log("Music started playing");
+                    })
+                    .catch(error => {
+                        console.log("Autoplay blocked:", error);
+                    });
+            }
         });
     </script>
 </body>
