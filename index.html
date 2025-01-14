@@ -6,7 +6,7 @@
     <title>Scroll-Triggered Music</title>
     <style>
         body {
-            height: 2000px; /* Ensure the page is scrollable */
+            height: 2000px; /* To create a scrollable page */
         }
         h1 {
             text-align: center;
@@ -19,22 +19,27 @@
     <audio id="backgroundMusic" src="https://bzchb330.github.io/music/insomia.mp3" loop></audio>
 
     <script>
-        let musicStarted = false; // Ensure the audio starts only once
+        let musicStarted = false; // Ensure music plays only once
 
-        // Scroll event listener
-        window.addEventListener('scroll', function() {
-            if (!musicStarted && window.scrollY > 0) { // Check if scrolled down
+        // Unified scroll handler
+        const startMusicOnScroll = () => {
+            if (!musicStarted) {
                 const audio = document.getElementById('backgroundMusic');
                 audio.play()
                     .then(() => {
-                        musicStarted = true; // Prevent further starts
+                        musicStarted = true; // Prevent further attempts to play
                         console.log("Music started playing");
                     })
                     .catch(error => {
                         console.log("Autoplay blocked:", error);
                     });
             }
-        });
+        };
+
+        // Listen to multiple scroll-related events
+        window.addEventListener('scroll', startMusicOnScroll); // Normal scrolling
+        window.addEventListener('wheel', startMusicOnScroll); // Mouse wheel scrolling
+        window.addEventListener('touchmove', startMusicOnScroll); // Touch screen scrolling
     </script>
 </body>
 </html>
