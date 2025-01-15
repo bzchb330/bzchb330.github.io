@@ -571,6 +571,7 @@
 
         // Listen to pointerdown (clicks, touch) and scrolling actions
         window.addEventListener('pointerdown', startMusic); // Detect any pointer interaction
+        window.addEventListener('pointermove', detectActivity);
         window.addEventListener('wheel', startMusic); // Detect scroll wheel usage
         window.addEventListener('scroll', startMusic); // Detect normal scrolling
     </script>
