@@ -1,616 +1,369 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Bujingda Zheng</title>
-    <meta name="author" content="Patrick Geneva">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <link rel="icon" href="pic.ico">
-    <script type="text/javascript">
-        function start(id) {
-            var element1 = document.getElementById(id + "_1");
-            var element2 = document.getElementById(id + "_2");
-            if (element1 && element2) {
-                element1.style.opacity = "0";
-                element2.style.opacity = "1";
-            }
-        }
-
-        function stop(id) {
-            var element1 = document.getElementById(id + "_1");
-            var element2 = document.getElementById(id + "_2");
-            if (element1 && element2) {
-                element1.style.opacity = "1";
-                element2.style.opacity = "0";
-            }
-        }
-    </script>
-    <script type="text/javascript">
-        if (window.location.protocol != "https:" && window.location.protocol != "file:") {
-            window.location.protocol = "https:";
-        }
-    </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bujingda Zheng</title>
+  <meta name="description" content="Bujingda Zheng — research in AI, hybrid 3D printing, and robotics." />
+  <link rel="icon" href="pic.ico" />
+  <link rel="preload" href="images/profile_image_2.jpg" as="image" />
+  <link rel="stylesheet" href="stylesheet.css" />
+  <style>
+    /* Minimal layout improvements without changing your existing stylesheet */
+    :root { --maxw: 1100px; }
+    body { margin: 0; line-height: 1.5; color: #111; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 16px; }
+    header { display: grid; grid-template-columns: 1fr 320px; gap: 20px; align-items: center; }
+    header h1 { margin: 0; font-size: clamp(28px, 4vw, 40px); text-align: center; }
+    header .bio p { margin: 6px 0; }
+    header .links { text-align: center; margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    header .links a { text-decoration: none; border-bottom: 1px dotted #888; }
+    figure { margin: 0; }
+    .profile img { width: 100%; height: auto; border-radius: 12px; }
+    section { margin: 32px 0; }
+    section h2 { font-size: 24px; margin: 0 0 8px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+    .card { display: grid; grid-template-rows: auto 1fr; gap: 10px; padding: 14px; border: 1px solid #eee; border-radius: 12px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    .card img { width: 100%; height: auto; border-radius: 8px; }
+    .paper-title { font-weight: 600; }
+    .meta { color: #555; font-size: 0.95em; }
+    .authors { font-size: 0.95em; }
+    .you { text-decoration: underline; font-weight: 700; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 1px, 1px); white-space: nowrap; border: 0; }
+    .media a { display: inline-block; margin-right: 12px; }
+    .music { position: fixed; right: 12px; bottom: 12px; background:#fff; border:1px solid #ddd; border-radius: 999px; box-shadow: 0 4px 12px rgba(0,0,0,.1); padding: 6px 12px; display:flex; align-items:center; gap:8px; }
+    .music button { border: 0; background: #111; color: #fff; padding: 6px 12px; border-radius: 999px; cursor: pointer; }
+    @media (max-width: 860px) { header { grid-template-columns: 1fr; } header h1 { text-align: left; } }
+  </style>
+  <script>
+    // Force https if served over http (keeps your original intent)
+    (function(){
+      if (location.protocol !== 'https:' && location.protocol !== 'file:') {
+        location.protocol = 'https:';
+      }
+    })();
+  </script>
 </head>
 <body>
+  <div class="wrap">
+    <header>
+      <div class="bio">
+        <h1>Bujingda Zheng</h1>
+        <p>PhD in Mechanical Engineering at the <a href="http://www.lin-research-lab.com/members.html">University of Missouri (2020–2024)</a>.</p>
+        <p>Minor in Statistics at the <a href="https://stat.missouri.edu/">University of Missouri (2020–2022)</a>.</p>
+        <p>MS <em>(With Distinction)</em> in Mechanical Engineering at the <a href="https://eng.unimelb.edu.au/">University of Melbourne (2016–2018)</a>.</p>
+        <p>BS in Aircraft Manufacturing Engineering at the <a href="http://jidian.nwpu.edu.cn/en.htm">Northwestern Polytechnical University (2012–2016)</a>.</p>
+        <nav class="links" aria-label="Profile links">
+          <a href="https://scholar.google.com/citations?user=frtQLcQAAAAJ&hl=en&oi=ao">Google Scholar</a>
+          <a href="https://www.linkedin.com/in/bujingda-zheng-bb1261121/">LinkedIn</a>
+          <a href="https://drive.google.com/file/d/1w2SyVxyJsfjuUVGm0zo3DVDjsWRw1VFO/view?usp=sharing">Defense Slides</a>
+          <a href="https://drive.google.com/file/d/1bVMpPdd-uT1o_gM5LTmAiYp7hPZ7HyUj/view?usp=sharing">CV</a>
+          <a href="https://space.bilibili.com/16543511?spm_id_from=333.1007.0.0">BiliBili</a>
+        </nav>
+      </div>
+      <figure class="profile">
+        <img src="images/profile_image_2.jpg" alt="Portrait of Bujingda Zheng" loading="eager" />
+      </figure>
+    </header>
 
+    <section id="phd">
+      <h2>1. PhD Research</h2>
+      <p>My PhD research focuses on artificial intelligence, hybrid 3D printing, and robotics.</p>
 
-<!-- ====================================== -->
-<!-- ====================================== -->
-<!-- ====================================== -->
-<table style="width:100%;max-width:1100px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tbody>
-    <tr style="padding:0px">
-        <td style="padding:0px">
-            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                <tbody>
-                <tr style="padding:0px">
-                    <td style="padding:2.5%;width:70%;vertical-align:middle">
-                        <p style="text-align:center">
-                            <center><p style="color:black;font-size:40px;">Bujingda Zheng</p></center>
-                            <br>
-                        </p>
-                        <p>
-                            
+      <div class="cards" role="list">
+        <!-- Carbon 2025 -->
+        <article class="card" role="listitem">
+          <img src="images/carbon_cover.png" alt="Self-detached LIG cover figure" loading="lazy" />
+          <div>
+            <div class="paper-title">Self-detached laser induced graphene derived from bio-oil distillation residues for multifunctional applications</div>
+            <div class="authors">Shuhong Yang, Yaseen Elkasabi, Qiangu Yan, <span class="you">Bujingda Zheng</span>, Honghua Qian, Jian Lin, Caixia Wan</div>
+            <div class="meta"><em>Carbon</em>, 2025.</div>
+            <a href="https://www.sciencedirect.com/science/article/pii/S0008622325003173?casa_token=nSPOpGqhFZcAAAAA:Auvg_lVV3g8eAhQOBg9qFnroOqncXIAy-phY_ytYaS3yGac2Kra_ckiINbIhlTvTSELHg3gf">PDF &amp; supporting videos</a>
+          </div>
+        </article>
 
-                            PhD in Mech-Eng at the <a href="http://www.lin-research-lab.com/members.html"> University of Missouri (2020 - 2024) </a>.<br>
-                            Minor in Statistics at the <a href="https://stat.missouri.edu/"> University of Missouri (2020 - 2022) </a>.<br>
-                            MS<em>(With Distinction)</em> in Mech-Eng at the <a href="https://eng.unimelb.edu.au/"> University of Melbourne (2016 - 2018) </a>.<br>
-                            BS in Aircraft-Manufact-Eng at the <a href="http://jidian.nwpu.edu.cn/en.htm"> Northwestern Polytechnical University (2012 - 2016) </a>.<br>
+        <!-- CEJ 2024 -->
+        <article class="card" role="listitem">
+          <img src="images/cej_cover.jpg" alt="CEJ cover figure" loading="lazy" />
+          <div>
+            <div class="paper-title">Manipulate dynamic chemical interactions in renewable polymers for 3D printing tunable, healable, and recyclable metamaterials</div>
+            <div class="authors">Yuchao Wu, Cheng Qiu, Karla J. Silva, Jaeho Shin, Shaoyun Wang, <span class="you">Bujingda Zheng</span>, Zhenru Chen, Guoliang Huang, James M. Tour, Jian Lin</div>
+            <div class="meta"><em>Chemical Engineering Journal</em>, 2024.</div>
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S1385894724076290">PDF &amp; supporting videos</a>
+          </div>
+        </article>
 
-                            
-                            
-                            
-                        <p style="text-align:center;margin-top:2em;">
-                            <a href="https://scholar.google.com/citations?user=frtQLcQAAAAJ&hl=en&oi=ao">Google Scholar</a> /
-                            <a href="https://www.linkedin.com/in/bujingda-zheng-bb1261121/">LinkedIn</a> /
-                            <a href="https://drive.google.com/file/d/1w2SyVxyJsfjuUVGm0zo3DVDjsWRw1VFO/view?usp=sharing"> Defense Slides</a> /
-                            <a href="https://drive.google.com/file/d/1bVMpPdd-uT1o_gM5LTmAiYp7hPZ7HyUj/view?usp=sharing"> CV </a> /
-                            <a href="https://space.bilibili.com/16543511?spm_id_from=333.1007.0.0"> BiliBili </a>
-                        </p>
-                    </td>
-                    <td style="padding:2.5%;width:30%;max-width:40%" id="profile">
-                        <a href="images/Bujingda Zheng 2021.png">
-                            <img style="width:100%;max-width:100%" alt="profile photo" src="images/profile_image_2.jpg">
-                        </a>
-                    </td>
-               </tr>
-                </tbody>
-            </table>
-            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                <tbody>
-                <tr>
+        <!-- ACS ANM 2024 -->
+        <article class="card" role="listitem">
+          <img src="images/ShuhongYang_cover.png" alt="ACS ANM cover figure" loading="lazy" />
+          <div>
+            <div class="paper-title">Low-Defect Laser-Induced Graphene from Lignin for Smart Triboelectric Touch Sensors</div>
+            <div class="authors">Shuhong Yang, <span class="you">Bujingda Zheng</span>, Honghua Qian, Qiangu Yan, Guoliang Huang, Jian Lin, Caixia Wan</div>
+            <div class="meta"><em>ACS Applied Nano Materials</em>, 2024.</div>
+            <a href="https://pubs.acs.org/doi/abs/10.1021/acsanm.4c05362">PDF &amp; supporting videos</a>
+          </div>
+        </article>
 
-                    <td style="padding:20px;width:100%;vertical-align:middle">
-                        
-                        <p style="color:black;font-size:25px;">1.PhD Research</p>
-                        <p>
-                            My PhD research focus on artificial intelligence, hybrid 3D printing, and robotics.
-                        </p>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-            <!-- ====================================== -->
-            <!-- ====================================== -->
-            <!-- ====================================== -->
+        <!-- EES 2024 -->
+        <article class="card" role="listitem">
+          <img src="images/seawater_splitting.gif" alt="Seawater splitting figure" loading="lazy" />
+          <div>
+            <div class="paper-title">Laser-induced high-entropy alloys as long-duration bifunctional electrocatalysts for seawater splitting</div>
+            <div class="authors">Yunchao Xie, Shichen Xu, Andrew C. Meng, <span class="you">Bujingda Zheng</span>, Zhenru Chen, James M. Tour, Jian Lin</div>
+            <div class="meta"><em>Energy &amp; Environmental Science</em>, 2024.</div>
+            <a href="https://pubs.rsc.org/en/content/articlehtml/2024/ee/d4ee01093k">PDF &amp; supporting videos</a>
+          </div>
+        </article>
 
-             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                <tbody>
-                <tr>
-                    <td style="padding:20px;width:100%;vertical-align:middle">
-                        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                            <tbody>
-<!-- shuhong 2025 LIG paper -->
-                                <tr onmouseout="stop('shuhong LIG 2025')" onmouseover="start('shuhong LIG 2025')">
-                                <td style="padding:20px;width:25%;vertical-align:middle">
-                                    </center><img src="images/carbon_cover.png" alt="secure" width="340"
-                                                  height="192"></center>
-                                <td style="padding:20px;width:75%;vertical-align:middle">
-                                        <papertitle> Self-detached laser induced graphene derived from bio-oil distillation residues for multifunctional applications
-                                        </
-                                        </papertitle></a><br>
-                                  Shuhong Yang,Yaseen Elkasabi,Qiangu Yan,<strong><u> <span class="highlight">Bujingda Zheng</span></u></strong>,Honghua Qian, Jian Lin, Caixia Wan
+        <!-- Ongoing: Tangible B Field -->
+        <article class="card" role="listitem">
+          <img src="images/tangible_b_field.gif" alt="Tangible B field visualization" loading="lazy" />
+          <div>
+            <div class="paper-title">Tangible <em>B</em> Field</div>
+            <div class="authors"><span class="you">Bujingda Zheng</span>, Jian Lin</div>
+            <div class="meta">Ongoing, 2024.</div>
+          </div>
+        </article>
 
-                                    <br>
-                                    <br>
-                                   <em>Carbon 2025</em>.
-                                    <br>
-                                    <a href="https://www.sciencedirect.com/science/article/pii/S0008622325003173?casa_token=nSPOpGqhFZcAAAAA:Auvg_lVV3g8eAhQOBg9qFnroOqncXIAy-phY_ytYaS3yGac2Kra_ckiINbIhlTvTSELHg3gf">pdf & supporting videos</a> 
-                                    <p></p>
-                                </td>
-                            </tr>
-<!-- yuchao 2024 3d printing paper -->
-                                <tr onmouseout="stop('yuchao 3d printing')" onmouseover="start('yuchao 3d printing')">
-                                <td style="padding:20px;width:25%;vertical-align:middle">
-                                    </center><img src="images/cej_cover.jpg" alt="secure" width="340"
-                                                  height="192"></center>
-                                <td style="padding:20px;width:75%;vertical-align:middle">
-                                        <papertitle> Manipulate dynamic chemical interactions in renewable polymers for 3D printing tunable, healable, and recyclable metamaterials
-                                        </
-                                        </papertitle></a><br>
-                                  Yuchao Wu,Cheng Qiu,Karla.J.Silva,Jaeho Shin,Shaoyun Wang,<strong><u> <span class="highlight">Bujingda Zheng</span></u></strong>,Zhenru Chen,Guoliang Huang,James.M.Tour,Jian Lin
+        <!-- Ongoing: Fully 3D Printed Multilayer Circuit -->
+        <article class="card" role="listitem">
+          <img src="images/Figure1.jpg" alt="Multilayer circuit figure" loading="lazy" />
+          <div>
+            <div class="paper-title">Fully 3D Printed Multilayer Circuit</div>
+            <div class="authors"><span class="you">Bujingda Zheng</span>, Jian Lin</div>
+            <div class="meta">Ongoing, 2024.</div>
+          </div>
+        </article>
 
-                                    <br>
-                                    <br>
-                                   <em>Chemical Engineering Journal 2024</em>.
-                                    <br>
-                                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S1385894724076290">pdf & supporting videos</a> 
-                                    <p></p>
-                                </td>
-                            </tr>
-<!-- shuhong 2024 LIG paper -->
-                                <tr onmouseout="stop('LIG remote control')" onmouseover="start('LIG remote control')">
-                                <td style="padding:20px;width:25%;vertical-align:middle">
-                                    </center><img src="images/ShuhongYang_cover.png" alt="secure" width="340"
-                                                  height="192"></center>
-                                <td style="padding:20px;width:75%;vertical-align:middle">
-                                        <papertitle> Low-Defect Laser-Induced Graphene from Lignin for Smart Triboelectric Touch Sensors
-                                        </
-                                        </papertitle></a><br>
-                                  Shuhong Yang,<strong><u> <span class="highlight">Bujingda Zheng</span></u></strong>, Honghua Qian, Qiangu Yan, Guoliang Huang, Jian Lin and Caixia Wan
+        <!-- Nat Comm 2024 -->
+        <article class="card" role="listitem">
+          <img src="images/FMA3DPL6.gif" alt="Nature Communications cover figure" loading="lazy" />
+          <div>
+            <div class="paper-title">Programmed Multimaterial Assembly by Synergized 3D Printing and Freeform Laser Induction</div>
+            <div class="authors"><span class="you">Bujingda Zheng</span>, Jian Lin</div>
+            <div class="meta"><em>Nature Communications</em>, 2024.</div>
+            <a href="https://www.nature.com/articles/s41467-024-48919-5">PDF &amp; videos</a> ·
+            <a href="https://www.youtube.com/watch?v=ZZx--h6pCm8&t=3s">YouTube</a>
+          </div>
+        </article>
 
-                                    <br>
-                                    <br>
-                                   <em>ACS Applied Nano Materials 2024</em>.
-                                    <br>
-                                    <a href="https://pubs.acs.org/doi/abs/10.1021/acsanm.4c05362">pdf & supporting videos</a> 
-                                    <p></p>
-                                </td>
-                            </tr>
-<!-- Yunchao 2024 water splitting paper -->
-                                <tr onmouseout="stop('seawater splitting')" onmouseover="start('seawater splitting')">
-                                <td style="padding:20px;width:25%;vertical-align:middle">
-                                    </center><img src="images/seawater_splitting.gif" alt="secure" width="340"
-                                                  height="192"></center>
-                                <td style="padding:20px;width:75%;vertical-align:middle">
-                                        <papertitle> Laser-induced high-entropy alloys as long-duration bifunctional electrocatalysts for seawater splitting
-                                        </
-                                        </papertitle></a><br>
-                                  Yunchao Xie, Shichen Xu, Andrew C. Meng,<strong><u> <span class="highlight">Bujingda Zheng</span></u></strong>,  Zhenru Chen, James M. Tour and Jian Lin
-                                    <br>
-                                    <br>
-                                   <em>Energy & Environmental Science 2024</em>.
-                                    <br>
-                                    <a href="https://pubs.rsc.org/en/content/articlehtml/2024/ee/d4ee01093k">pdf & supporting videos</a> 
-                                    <p></p>
-                                </td>
-                            </tr>
-                                
-<!-- OnGoing -->
-                                <tr onmouseout="stop('TangibleBfield')" onmouseover="start('TangibleBfield')">
-                                <td style="padding:20px;width:25%;vertical-align:middle">
-                                    </center><img src="images/tangible_b_field.gif" alt="secure" width="340"
-                                                  height="192"></center>
-                                <td style="padding:20px;width:75%;vertical-align:middle">
-                                        <papertitle> Tangible <em>B</em> Field
-                                        </
-                                        </papertitle></a><br>
-                                   <strong><u> <span class="highlight">Bujingda Zheng</span></u></strong>, and Jian Lin
-                                    <br>
-                                    <br>
-                                   <em>Ongoing, 2024</em>.
-                                    <br>
-                                    <p></p>
-                                </td>
-                            </tr>
-<!-- OnGoing -->
-                                <tr onmouseout="stop('Zheng2023MFA3DP')" onmouseover="start('Zheng2024MFA3DP')">
-                                <td style="padding:20px;width:25%;vertical-align:middle">
-                                    </center><img src="images/Figure1.jpg" alt="secure" width="340"
-                                                  height="192"></center>
-                                <td style="padding:20px;width:75%;vertical-align:middle">
-                                        <papertitle> Fully 3D Printed Multilayer Cricuit 
-                                        </
-                                        </papertitle></a><br>
-                                   <strong><u> <span class="highlight">Bujingda Zheng</span></u></strong>, and Jian Lin
-                                    <br>
-                                    <br>
-                                   <em>Ongoing, 2024</em>.
-                                    <br>
-                                    <p></p>
-                                </td>
-                            </tr>
-                    
-<!-- 5x_printer_round2 -->
-                                <tr onmouseout="stop('Zheng2023MFA3DP')" onmouseover="start('Zheng2023MFA3DP')">
-                                <td style="padding:20px;width:25%;vertical-align:middle">
-                                    </center><img src="images/FMA3DPL6.gif" alt="secure" width="340"
-                                                  height="192"></center>
-                                <td style="padding:20px;width:75%;vertical-align:middle">
-                                        <papertitle> Programmed Multimaterial Assembly by Synergized 3D Printing and Freeform Laser Induction
-                                        </
-                                        </papertitle><br>
-                                   <strong><u> <span class="highlight">Bujingda Zheng</span></u></strong>, and Jian Lin
-                                    <br>
-                                    <br>
-                                   <em>Nature Communications, 2024</em>.
-                                    <br>
-                                    <a href="https://www.nature.com/articles/s41467-024-48919-5 ">pdf & supporting videos, </a> 
-                                    <a href="https://www.youtube.com/watch?v=ZZx--h6pCm8&t=3s ">YouTube Video</a> 
-                                </td>
-                            </tr>     
-  
-<!-- conference -->
-                                <tr onmouseout="stop('Zheng2023idetc')" onmouseover="start('Zheng2023idetc')">
-                                <td style="padding:20px;width:25%;vertical-align:middle">
-                                    </center><img src="images/idetc_cover2.jpg" alt="secure" width="340"
-                                                  height="192"></center>
-                                <td style="padding:20px;width:75%;vertical-align:middle">
-                                        <papertitle>Presentation: 5-axis freeform electronics fabrication via laser induction.
-                                        </
-                                        </papertitle></a><br>
-                                   <strong><u> <span class="highlight">Bujingda Zheng</span></u></strong>, and Jian Lin
-                                    <br>
-                                    <br>
-                                   <em>ASME IDETC-CIE 2023</em>.
-                                    <br>
-                                    <p></p>
-                                </td>
-                            </tr>                                
-<!-- 1 -->
-                                <tr onmouseout="stop('Zheng2022AFM')" onmouseover="start('Zheng2022AFM')">
-                                <td style="padding:20px;width:25%;vertical-align:middle">
-                                    </center><img src="images/AFM_cover3.gif" alt="secure" width="340"
-                                                  height="182"></center>
-                                <td style="padding:20px;width:75%;vertical-align:middle">
-                                    <a href="papers/Adv Funct Materials - 2022 - Zheng.pdf">
-                                        <papertitle>Direct Freeform Laser Fabrication of 3D Conformable Electronics.
-                                        </
-                                        </papertitle></a><br>
-                                   <strong><u> <span class="highlight">Bujingda Zheng</span></u></strong>, Ganggang Zhao, Zheng Yan, Yunchao Xie and
-                                    Jian Lin
-                                    <br>
-                                    <br>
-                                   <em>Advanced Functional Materials 2022</em>.
-                                    <br>
-                                    <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/adfm.202210084">(pdf & supporting infos)</a> 
-                                    <p></p>
-                                </td>
-                            </tr>
+        <!-- ASME IDETC 2023 -->
+        <article class="card" role="listitem">
+          <img src="images/idetc_cover2.jpg" alt="ASME IDETC presentation cover" loading="lazy" />
+          <div>
+            <div class="paper-title">Presentation: 5-axis freeform electronics fabrication via laser induction</div>
+            <div class="authors"><span class="you">Bujingda Zheng</span>, Jian Lin</div>
+            <div class="meta"><em>ASME IDETC-CIE</em>, 2023.</div>
+          </div>
+        </article>
 
-<!-- 2 -->
-                                <tr onmouseout="stop('Zheng2022JFR')" onmouseover="start('Zheng2022JFR')">
-                                <td style="padding:20px;width:25%;vertical-align:middle">
-                                    </center><img src="images/JFR_cover3.gif" alt="secure" width="340"
-                                                  height="182"></center>
-                                <td style="padding:20px;width:75%;vertical-align:middle">
-                                    <a href="papers/Journal of Field Robotics - 2022 - Zheng.pdf">
-                                        <papertitle>An autonomous robot for shell and tube heat exchanger inspection.
-                                        </
-                                        </papertitle></a><br>
-                                   <strong><u> <span class="highlight">Bujingda Zheng</span></u></strong>, Jheng-Wun Su, Yunchao Xie, Jonathan Miles, Hong Wang, Wenxin Gao, Ming Xin and
-                                    Jian Lin
-                                    <br>
-                                    <br>
-                                   <em>Journal of field robotics 2022</em>.
-                                    <br>
-                                    <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/rob.22102">(pdf & supporting infos)</a> 
-                                    <p></p>
-                                </td>
-                            </tr>
-<!-- 3 -->
-                               <tr onmouseout="stop('chaos')" onmouseover="start('chaos')">
-                                <td style="padding:20px;width:25%;vertical-align:middle">
-                                    </center><img src="images/chaos_cover.png" alt="secure" width="340"
-                                                  height="182"></center>
-                                <td style="padding:20px;width:75%;vertical-align:middle">
-                                    <a href="https://doi.org/10.1016/j.cej.2023.144226">
-                                        <papertitle>A photocured Bio-based shape memory thermoplastics for reversible wet adhesion.
-                                        </
-                                        </papertitle></a><br>
-                                   Y Wu, C Su, S Wang,<strong><u> <span class="highlight">B Zheng</span></u></strong>, A Mahjoubnia, K Sattari, H Zhang, J Meister, G Huang and J Lin
-                                    <br>
-                                    <br>
-                                   <em>Chemical Engineering Journal 2023</em>.
-                                    <br>
-                                    <p></p>
-                                </td>
-                            </tr>
-<!-- 4 -->
-                               <tr onmouseout="stop('sheldon')" onmouseover="start('sheldon')">
-                                <td style="padding:20px;width:25%;vertical-align:middle">
-                                     </center><img src="images/acsapplied_cover.gif" alt="secure" width="340"
-                                                  height="182"></center>
-                                <td style="padding:20px;width:75%;vertical-align:middle">
-                                    <a href="https://pubs.acs.org/doi/full/10.1021/acsami.1c16506">
-                                        <papertitle>Accelerate synthesis of metal–organic frameworks by a robotic platform and bayesian optimization.
-                                        </
-                                        </papertitle></a><br>
-                                   Y Xie, C Zhang, H Deng,<strong><u> <span class="highlight">B Zheng</span></u></strong>, J Su, K Shutt and J Lin
-                                    <br>
-                                    <br>
-                                   <em>ACS Applied Materials & Interfaces 2021</em>.
-                                    <br>
-                                    <p></p>
-                                </td>
-                            </tr>
-<!-- 5 -->
-                               <tr onmouseout="stop('feiqiu')" onmouseover="start('feiqiu')">
-                                <td style="padding:20px;width:25%;vertical-align:middle">
-                                    </center><img src="images/feiqiu_cover.png" alt="secure" width="340"
-                                                  height="152"></center>
-                                <td style="padding:20px;width:75%;vertical-align:middle">
-                                    <a href="https://link.springer.com/article/10.1007/s40962-019-00338-9">
-                                        <papertitle>Control of edge plate stray grain of single-crystal turbine blade by using process bar method.
-                                        </
-                                        </papertitle></a><br>
-                                   F Qiu, K Bu,<strong><u> <span class="highlight">B Zheng</span></u></strong>, and G Tian
-                                    <br>
-                                    <br>
-                                   <em>International Journal of Metalcasting 2020</em>.
-                                    <br>
-                                    <p></p>
-                                </td>
+        <!-- AFM 2022 -->
+        <article class="card" role="listitem">
+          <img src="images/AFM_cover3.gif" alt="AFM cover figure" loading="lazy" />
+          <div>
+            <div class="paper-title">Direct Freeform Laser Fabrication of 3D Conformable Electronics</div>
+            <div class="authors"><span class="you">Bujingda Zheng</span>, Ganggang Zhao, Zheng Yan, Yunchao Xie, Jian Lin</div>
+            <div class="meta"><em>Advanced Functional Materials</em>, 2022.</div>
+            <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/adfm.202210084">PDF &amp; supporting information</a>
+          </div>
+        </article>
 
+        <!-- JFR 2022 -->
+        <article class="card" role="listitem">
+          <img src="images/JFR_cover3.gif" alt="JFR cover figure" loading="lazy" />
+          <div>
+            <div class="paper-title">An autonomous robot for shell and tube heat exchanger inspection</div>
+            <div class="authors"><span class="you">Bujingda Zheng</span>, Jheng-Wun Su, Yunchao Xie, Jonathan Miles, Hong Wang, Wenxin Gao, Ming Xin, Jian Lin</div>
+            <div class="meta"><em>Journal of Field Robotics</em>, 2022.</div>
+            <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/rob.22102">PDF &amp; supporting information</a>
+          </div>
+        </article>
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-        <tbody>
-        <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-                <p style="color:black;font-size:25px;">2.Media Coverage</p>
+        <!-- CEJ 2023 -->
+        <article class="card" role="listitem">
+          <img src="images/chaos_cover.png" alt="CEJ 2023 cover figure" loading="lazy" />
+          <div>
+            <div class="paper-title">A photocured bio-based shape memory thermoplastic for reversible wet adhesion</div>
+            <div class="authors">Y. Wu, C. Su, S. Wang, <span class="you">B. Zheng</span>, A. Mahjoubnia, K. Sattari, H. Zhang, J. Meister, G. Huang, J. Lin</div>
+            <div class="meta"><em>Chemical Engineering Journal</em>, 2023.</div>
+          </div>
+        </article>
 
-                <a href="https://techxplore.com/news/2024-06-required-3d-method-multi-materials.html#google_vignette">
-                <papertitle>TechXplore
-                </
-                </papertitle></a><br>
-                
-                <a href="https://www.mittrchina.com/news/detail/11366">
-                <papertitle>MIT Technology Review China
-                </
-                </papertitle></a><br>
+        <!-- ACS AMI 2021 -->
+        <article class="card" role="listitem">
+          <img src="images/acsapplied_cover.gif" alt="ACS AMI cover figure" loading="lazy" />
+          <div>
+            <div class="paper-title">Accelerate synthesis of metal–organic frameworks by a robotic platform and Bayesian optimization</div>
+            <div class="authors">Y. Xie, C. Zhang, H. Deng, <span class="you">B. Zheng</span>, J. Su, K. Shutt, J. Lin</div>
+            <div class="meta"><em>ACS Applied Materials &amp; Interfaces</em>, 2021.</div>
+          </div>
+        </article>
 
-                <a href="https://engineering.missouri.edu/2022/engineers-develop-robot-to-automatically-inspect-heat-exchangers/">
-                <papertitle>Mizzou Engineering News
-                </
-                </papertitle></a><br>
-                
-            </td>
-        </tr>
-        </tbody>
-    </table>
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                <tbody>
-                <tr>
-                    <td style="padding:20px;width:100%;vertical-align:middle">
-                        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                            <tbody>
+        <!-- IJ Metalcasting 2020 -->
+        <article class="card" role="listitem">
+          <img src="images/feiqiu_cover.png" alt="IJ Metalcasting cover figure" loading="lazy" />
+          <div>
+            <div class="paper-title">Control of edge plate stray grain of single-crystal turbine blade by using process bar method</div>
+            <div class="authors">F. Qiu, K. Bu, <span class="you">B. Zheng</span>, G. Tian</div>
+            <div class="meta"><em>International Journal of Metalcasting</em>, 2020.</div>
+          </div>
+        </article>
+      </div>
+    </section>
 
+    <section id="media">
+      <h2>2. Media Coverage</h2>
+      <p class="media">
+        <a href="https://techxplore.com/news/2024-06-required-3d-method-multi-materials.html#google_vignette">TechXplore</a>
+        <a href="https://www.mittrchina.com/news/detail/11366">MIT Technology Review China</a>
+        <a href="https://engineering.missouri.edu/2022/engineers-develop-robot-to-automatically-inspect-heat-exchangers/">Mizzou Engineering News</a>
+      </p>
+    </section>
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-        <tbody>
-        <tr>
-            <td style="padding:0px;width:100%;vertical-align:middle">
-                <p style="color:black;font-size:25px;">3.MS research and case study projects</p>
-                <p>
-                Throughout my MS and free time, I was involved in a range of projects, including computer vision, robotics design and control, statistics, and numerical simulation.
-                </p>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                <tbody>
-                <tr>
-                    <td style="padding:0px;width:100%;vertical-align:middle">
-                        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                            <tbody>
-<!-- Sine Wave FFT project -->
-            <tr onmouseout="stop('cv')" onmouseover="start('cv')">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-                </center><img src="images/sinewave_cover.gif" alt="secure" width="340"
-                              height="182"></center>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <ul>
-                    <li><papertitle>One wire reads multiple sensor data through FFT decoupling.</li>
-                     </
-                    </papertitle></a><br>
-                </ul>
-               Case study of an interesting paper, 2023. 
-                <a href="https://www.science.org/doi/10.1126/sciadv.adi6633"> (Sci.Adv.9(48),eadi6633)</a> 
-                <br>
-                <br>
-            </td>
-        </tr>
-                            
-<!-- computer vision -->
-            <tr onmouseout="stop('cv')" onmouseover="start('cv')">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-                </center><img src="images/cv_cover2.gif" alt="secure" width="340"
-                              height="182"></center>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <ul>
-                    <li><papertitle>Object tracking based on Harris feature and optical flow.</li>
-                     </
-                    </papertitle></a><br>
-                </ul>
-               ECE8690 Computer vision, project, 2022.
-                <a href="https://github.com/bzchb330/bzchb330.github.io/tree/main/code/Matlab_code">   (Code)</a> 
-                <br>
-                <br>
-            </td>
-        </tr>
+    <section id="ms">
+      <h2>3. MS research and case study projects</h2>
+      <p>Throughout my MS and free time, I was involved in a range of projects, including computer vision, robotics design and control, statistics, and numerical simulation.</p>
 
-<!-- fiducial marker -->
-            <tr onmouseout="stop('fiducial marker')" onmouseover="start('fiducial marker')">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-                </center><img src="images/fiducial_cover.gif" alt="secure" width="340"
-                              height="182"></center>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <ul>
-                    <li><papertitle>Positioning control of mecanum-wheeled platform.</li>
-                     </
-                    </papertitle></a><br>
-                </ul>
-               Case study of 6-DOF positioning enabled by Fiducial marker and implementation, 2022.
-                <br>
-                <br>
-            </td>
-        </tr>  
+      <div class="cards" role="list">
+        <!-- FFT decoupling -->
+        <article class="card" role="listitem">
+          <img src="images/sinewave_cover.gif" alt="Sine wave FFT illustration" loading="lazy" />
+          <div>
+            <div class="paper-title">One wire reads multiple sensor data through FFT decoupling</div>
+            <div class="meta">Case study of an interesting paper, 2023. <a href="https://www.science.org/doi/10.1126/sciadv.adi6633">Sci. Adv. 9(48), eadi6633</a></div>
+          </div>
+        </article>
 
-<!-- LDR -->
-            <tr onmouseout="stop('LDRarray')" onmouseover="start('LDRarray')">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-                </center><img src="images/ldr_cover.gif" alt="secure" width="340"
-                              height="182"></center>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <ul>
-                    <li><papertitle>Gesture recognition through a 7X7 LDR matrix.</li>
-                     </
-                    </papertitle></a><br>
-                </ul>
-               Case study of AI model implementation on arduino and data readout circuit of light dependent resistor (LDR) cross-bar matrix , 2021. 
-                <a href="https://github.com/bzchb330/bzchb330.github.io/tree/main/code/arduino_code/ldr_matrix">   (Code)</a> 
-                <br>
-                <br>
-            </td>
-        </tr>  
+        <!-- CV project -->
+        <article class="card" role="listitem">
+          <img src="images/cv_cover2.gif" alt="Optical flow and Harris features" loading="lazy" />
+          <div>
+            <div class="paper-title">Object tracking based on Harris feature and optical flow</div>
+            <div class="meta">ECE8690 Computer Vision project, 2022. <a href="https://github.com/bzchb330/bzchb330.github.io/tree/main/code/Matlab_code">Code</a></div>
+          </div>
+        </article>
 
-<!-- ferro fluid -->
-            <tr onmouseout="stop('fefluid')" onmouseover="start('fefluid')">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-                </center><img src="images/fefluid_cover.gif" alt="secure" width="340"
-                              height="182"></center>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <ul>
-                   <li><papertitle>Hardware and control development of 3D magnetic field for ferrofluid.</li> 
-                     </
-                    </papertitle></a><br>
-                </ul>
-               Magnetic field control case study and implementation, 2020.
-                <br>
-                <br>
-            </td>
-        </tr>
+        <!-- Fiducial marker -->
+        <article class="card" role="listitem">
+          <img src="images/fiducial_cover.gif" alt="Fiducial marker pose tracking" loading="lazy" />
+          <div>
+            <div class="paper-title">Positioning control of mecanum-wheeled platform</div>
+            <div class="meta">Case study of 6-DOF positioning enabled by fiducial marker and implementation, 2022.</div>
+          </div>
+        </article>
 
-<!-- ppt -->
-            <tr onmouseout="stop('ppt')" onmouseover="start('ppt')">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-                </center><img src="images/ppt_cover2.gif" alt="secure" width="340"
-                              height="182"></center>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <ul>
-                    <li><papertitle>Real-time automated game player.</li>
-                     </
-                    </papertitle></a><br>
-                </ul>
-               Computer vision Hough transform case study and implementation, hardware controlled by arduino, image-processing via MATLAB, 2019.
-                <br>
-                <br>
-            </td>
-        </tr>
+        <!-- LDR matrix -->
+        <article class="card" role="listitem">
+          <img src="images/ldr_cover.gif" alt="LDR matrix gesture recognition" loading="lazy" />
+          <div>
+            <div class="paper-title">Gesture recognition through a 7×7 LDR matrix</div>
+            <div class="meta">AI model on Arduino &amp; LDR cross-bar matrix, 2021. <a href="https://github.com/bzchb330/bzchb330.github.io/tree/main/code/arduino_code/ldr_matrix">Code</a></div>
+          </div>
+        </article>
 
-<!-- nozzle -->
-            <tr onmouseout="stop('nozzle')" onmouseover="start('nozzle')">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-                </center><img src="images/nozzle_cover.gif" alt="secure" width="340"
-                              height="182"></center>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <ul>
-                    <li><papertitle>Mechanical and control design of a 3-DOF thrust vectoring nozzle.</li>
-                     </
-                    </papertitle></a><br>
-                </ul>
-               Parallel mechanism kinematics case study and implementation, 2019.
-                <br>
-                <br>
-            </td>
-        </tr>
+        <!-- Ferrofluid -->
+        <article class="card" role="listitem">
+          <img src="images/fefluid_cover.gif" alt="3D magnetic field control for ferrofluid" loading="lazy" />
+          <div>
+            <div class="paper-title">Hardware and control development of 3D magnetic field for ferrofluid</div>
+            <div class="meta">Magnetic field control case study and implementation, 2020.</div>
+          </div>
+        </article>
 
-<!-- inverted pendulum -->
-            <tr onmouseout="stop('pendulum')" onmouseover="start('pendulum')">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-                </center><img src="images/pendulum_cover.gif" alt="secure" width="340"
-                              height="182"></center>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <ul>
-                    <li><papertitle>Control design of a momentum wheel based inverted pendulum.</li>
-                     </
-                    </papertitle></a><br>
-                </ul>
-               PID algorithm case study and implementation, 2018.
-                <a href="https://github.com/bzchb330/bzchb330.github.io/tree/main/code/arduino_code/reaction%20wheel%20inverted%20pendulum">   (Code)</a> 
-                <br>
-                <br>
-            </td>
-        </tr>
+        <!-- Real-time game player -->
+        <article class="card" role="listitem">
+          <img src="images/ppt_cover2.gif" alt="Automated game player using CV" loading="lazy" />
+          <div>
+            <div class="paper-title">Real-time automated game player</div>
+            <div class="meta">Hough transform case study; Arduino hardware, MATLAB image processing, 2019.</div>
+          </div>
+        </article>
 
-<!-- MS -->
-            <tr onmouseout="stop('MS')" onmouseover="start('MS')">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-                </center><img src="images/ms_cover.png" alt="secure" width="340"
-                              height="270"></center>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                    <ul>
-                        <li><papertitle>CFD simulation of airflow over perforated plate (bubble column).</li>
-                         </
-                        </papertitle></a><br>
-                    </ul>
-               Capstone project of MS degree, University of Melbourne, 2018.
-                <br> 
-            </td>
-        </tr>
+        <!-- 3-DOF nozzle -->
+        <article class="card" role="listitem">
+          <img src="images/nozzle_cover.gif" alt="3-DOF thrust vectoring nozzle" loading="lazy" />
+          <div>
+            <div class="paper-title">Mechanical and control design of a 3-DOF thrust vectoring nozzle</div>
+            <div class="meta">Parallel mechanism kinematics; implementation, 2019.</div>
+          </div>
+        </article>
 
-<!-- 2-1 -->
-            <tr onmouseout="stop('swe')" onmouseover="start('swe')">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-                </center><img src="images/swe_cover2.gif" alt="secure" width="340"
-                              height="182"></center>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="papers/Assignment1 Lindong_Li Bujingda_ZhengV2.pdf">
-                    <ul>
-                        <li><papertitle>Numerical simulation of shallow water equation with parallel computing.</li>
-                         </
-                        </papertitle></a><br>
-                    </ul>
-               MCEN90031, High performance computing, University of Melbourne, 2017.
-                <a href="https://github.com/bzchb330/bzchb330.github.io/tree/main/code/Matlab_code/swe">   (Code)</a>
-                <br> 
-            </td>
-        </tr>
-                    
-<!-- sp -->
-            <tr onmouseout="stop('sp')" onmouseover="start('sp')">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-                </center><img src="images/sp_cover2.gif" alt="secure" width="340"
-                              height="182"></center>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <ul>
-                    <li><papertitle>Stewart platform controlled by arduino, simulated by MATLAB.</li>
-                     </
-                    </papertitle></a><br>
-                </ul>
-               Parallel mechanism kinematics case study and implementation, 2017.
-                <a href="https://github.com/bzchb330/bzchb330.github.io/tree/main/code/arduino_code/stewart_platform">   (Code)</a> 
-                <br>
-                <br>
-            </td>
-        </tr> 
+        <!-- Inverted pendulum -->
+        <article class="card" role="listitem">
+          <img src="images/pendulum_cover.gif" alt="Momentum wheel inverted pendulum" loading="lazy" />
+          <div>
+            <div class="paper-title">Control design of a momentum wheel based inverted pendulum</div>
+            <div class="meta">PID algorithm case study and implementation, 2018. <a href="https://github.com/bzchb330/bzchb330.github.io/tree/main/code/arduino_code/reaction%20wheel%20inverted%20pendulum">Code</a></div>
+          </div>
+        </article>
 
-   <audio id="backgroundMusic" src="https://bzchb330.github.io/music/insomia.mp3" loop></audio>
+        <!-- CFD capstone -->
+        <article class="card" role="listitem">
+          <img src="images/ms_cover.png" alt="CFD of airflow over perforated plate" loading="lazy" />
+          <div>
+            <div class="paper-title">CFD simulation of airflow over perforated plate (bubble column)</div>
+            <div class="meta">Capstone project of MS degree, University of Melbourne, 2018.</div>
+          </div>
+        </article>
 
-    <script>
-        let musicStarted = false; // Ensure music plays only once
+        <!-- SWE parallel computing -->
+        <article class="card" role="listitem">
+          <img src="images/swe_cover2.gif" alt="Shallow water equation parallel computing" loading="lazy" />
+          <div>
+            <div class="paper-title">Numerical simulation of shallow water equation with parallel computing</div>
+            <div class="meta">MCEN90031 High Performance Computing, University of Melbourne, 2017. <a href="https://github.com/bzchb330/bzchb330.github.io/tree/main/code/Matlab_code/swe">Code</a></div>
+          </div>
+        </article>
 
-        const startMusic = () => {
-            if (!musicStarted) {
-                const audio = document.getElementById('backgroundMusic');
-                audio.play()
-                    .then(() => {
-                        musicStarted = true; // Prevent further attempts to play
-                        console.log("Music started playing");
-                    })
-                    .catch(error => {
-                        console.log("Autoplay blocked:", error);
-                    });
-            }
-        };
+        <!-- Stewart platform -->
+        <article class="card" role="listitem">
+          <img src="images/sp_cover2.gif" alt="Stewart platform controlled by Arduino" loading="lazy" />
+          <div>
+            <div class="paper-title">Stewart platform controlled by Arduino, simulated by MATLAB</div>
+            <div class="meta">Parallel mechanism kinematics; implementation, 2017. <a href="https://github.com/bzchb330/bzchb330.github.io/tree/main/code/arduino_code/stewart_platform">Code</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
 
-        // Listen to pointerdown (clicks, touch) and scrolling actions
-        window.addEventListener('pointerdown', startMusic); // Detect any pointer interaction
-        window.addEventListener('pointermove', detectActivity);
-        window.addEventListener('wheel', startMusic); // Detect scroll wheel usage
-        window.addEventListener('scroll', startMusic); // Detect normal scrolling
-    </script>
+  <!-- Background music with an explicit control for accessibility/consent -->
+  <audio id="bgm" src="https://bzchb330.github.io/music/insomia.mp3" preload="none" loop></audio>
+  <div class="music" aria-live="polite">
+    <span id="musicStatus">Music: off</span>
+    <button id="toggleMusic" type="button" aria-controls="bgm" aria-pressed="false">Play</button>
+  </div>
+
+  <script>
+    (function(){
+      const audio = document.getElementById('bgm');
+      const btn = document.getElementById('toggleMusic');
+      const status = document.getElementById('musicStatus');
+
+      function updateUI(){
+        const playing = !audio.paused;
+        btn.textContent = playing ? 'Pause' : 'Play';
+        btn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+        status.textContent = 'Music: ' + (playing ? 'on' : 'off');
+      }
+
+      btn.addEventListener('click', async () => {
+        try {
+          if (audio.paused) {
+            await audio.play();
+          } else {
+            audio.pause();
+          }
+          updateUI();
+        } catch(e) {
+          console.log('Playback error:', e);
+        }
+      });
+
+      // Respect user gestures: allow play on any first interaction if desired
+      function safeAutoplay(){ audio.play().then(updateUI).catch(()=>{}); }
+      window.addEventListener('pointerdown', safeAutoplay, { once: true });
+    })();
+  </script>
 </body>
-</html> 
+</html>
